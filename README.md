@@ -1,10 +1,13 @@
 # First-project
 This is my first project in the journey for learning data analytics and implementing my skills and knowledge in real world .
-<html>
-<body>
+python
+from flask import Flask, render_template
 
-<h2>HTML Image</h2>
-<img src="C:\Users\pavit\Downloads\panigalev4.jpg" alt="Panigalev4" width="500" height="333">
+app = Flask(__name__)
 
-</body>
-</html>
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
